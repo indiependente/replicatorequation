@@ -83,7 +83,7 @@
 						<ul>
 							<li class="fragment">Most important game dynamics</li>
 							<li class="fragment">First game dynamics studied in connection with evolutionary game theory</li>
-							<li class="fragment">We'll see it in a minute</li>
+							<li class="fragment">We'll take a look at it in a minute</li>
 						</ul>
 					</section>
 
@@ -121,7 +121,7 @@
 						<h3>What if...</h3>
 						<ul>
 							<li class="fragment">Individual payoff depends on actions of others</li>
-							<li class="fragment">EGT early success </li>
+							<li class="fragment">EGT early success</li>
 
 						</ul>
 					</section>
@@ -175,6 +175,161 @@
 							</ul>
 						</ul>
 					</section>
+
+					<section>
+						<h3>Continuous-Time Pure Strategy Replicator Equation</h3>
+						<br/>
+						<center>$\boxed{\dot{p}_{i}=p_{i}(\pi(e_{i}, p)-\pi(p, p)) \text{ for } i = 1, \ldots, m}$</center>
+						<br/>
+						<small>
+							<ul>
+								<li class="fragment">Per capita growth rate in the number $n_{i}$ of individuals using strategy $e_{i}$ at time $t$</li>
+								<li class="fragment">$\pi$ expected payoff of $e_{i}$ from a single interaction with a random individual from the large population</li>
+								<li class="fragment">
+									$p$ is the population state in the strategy simplex
+									<ul><li>$\Delta^{m} \equiv \{(p_{1}, p_{2}, \ldots, p_{m})\mid\sum_{j=1}^{m}{p_{j}}=1, 0 \leq p_{j} \leq 1\}$</li></ul>
+								</li>
+
+								<li class="fragment">
+									$p_{i}$ proportion of population using strategy $e_{i}$ at time $t$
+									<ul><li>$p_{i} = n_{i}/\sum_{j=1}^{m}{n_{j}}$</li></ul>
+								</li>
+
+								<li class="fragment">$\pi(p, p) = \sum_{j=1}^{m}{p_{i}\pi(e_{i}, p)}$ population mean payoff</li>
+							</ul>
+						</small>
+					</section>
+
+					<section>
+						<h3>Theorem 1</h3>
+							<font face="Times New Roman">
+								The replicator equation for a matrix game satisfies:
+							<ol>
+								<li>A stable rest point is a NE</li>
+								<li>A convergent trajectory in the interior of the strategy space evolves to a NE</li>
+								<li>A strict NE is locally asymptotically stable</li>
+							</ol>
+							</font>
+					</section>
+
+					<section>
+						<h3>More on Theorem 1</h3>
+						<ul>
+							<li class="fragment">Folk Theorem of Evolutionary Game Theory applied to the replicator equation</li>
+							<li class="fragment">
+								Biologists can predict the evolutionary outcome of their stable systems
+								<ul><li>By examining NE behavior of the underlying game</li></ul>
+							</li>
+							<li class="fragment">
+								Individuals as rational decision makers
+								<ul><li>Natural selection through fitness drives system to stable outcome</li></ul>
+							</li>
+							<li class="fragment">Paradigm shift toward strategic reasoning in population biology</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Strategic Reasoning</h3>
+						<ul>
+							<li class="fragment">Enhances the importance of strategic reasoning</li>
+							<li class="fragment">Based on the concept of ESS</li>
+							<li class="fragment">J. M. Smith wanted to be more precise on the ESS definition</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Maynard on ESS</h3>
+							In a matrix game, if most individuals in the population use $p^{*}\in\Delta^{m}$ with the rest using a mutant strategy $p$, then the mutant strategy will go extinct iff
+							<ul class="fragment">
+								<li>$\pi(p, p^{*})\leq\pi(p^{*}, p^{*})$ (NE condition) <b>and</b></li>
+								<li>$\pi(p^{*}, p) \gt \pi(p, p) \text{ if } \pi(p, p^{*})=\pi(p^{*}, p^{*})$ (stability condition)</li>
+							</ul>
+							<span class="fragment">$p^{*}\in\Delta^{m}$ is then an ESS if it satisfies these two conditions for all other $p\in\Delta^{m}$</span>
+					</section>
+
+					<section>
+						<h3>Theorem 2</h3>
+						<font face="Times New Roman">
+						<ol>
+							<li>$p^{*}$ is an ESS of a matrix game iff $\pi(p^{*}, p) > \pi(p, p) \forall p \in \Delta^{m}$ sufficiently close (but not equal) to $p^{*}$</li>
+							<li>An ESS $p^{*}$ is a locally asymptotically stable rest point of the replicator equation</li>
+							<li>An ESS $p^{*}$ in the interior of $\Delta^{m}$ is a globally asymptotically stable rest point of the replicator equation</li>
+						</ol>
+
+						</font>
+					</section>
+					<section>
+						<h3>Theorem 2</h3>
+						<ul>
+							<li>
+								These statements are not always true
+								<ul>
+									<li>Three-strategy games that exhibit cyclic dominance</li>
+								</ul>
+							</li>
+
+						</ul>
+					</section>
+					<section>
+						<h3>Example 1</h3>
+						<h4>Generalized Rock Scissors Paper game</h4>
+						<!-- $\begin{matrix} & R & S \\ R & 0 & b_{2} \\ S & c & d \end{matrix}$ -->
+						$\begin{array}{l|c|c|c}
+							& R & S & P\\
+							\hline
+							R & 0 & b_{2} & -a_{3}\\
+							\hline
+							S & -a_{1} & 0 & b_{3}\\
+							\hline
+							P & b_{1} & -a_{2} & 0
+						\end{array} = \begin{array}{c|c|c}
+							 R & S & P\\
+							\hline
+							0 & 6 & -4\\
+							\hline
+							-4 & 0 & 4\\
+							\hline
+							2 & -2 & 0
+						\end{array}$
+					</section>
+					<section>
+						<h3>Example 1</h3>
+						<ul>
+							<li class="fragment">R beats S (strictly dominates), S beats P and P beats R</li>
+							<li class="fragment">Dominance implies that there is no NE on the boundary of $\Delta^{3}$</li>
+							<li class="fragment">$p^{*}=(10/29, 8/29, 11/29)$ complete mixed strategy interior
+								<ul><li>Unique NE</li></ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Example 1</h3>
+						<img src="imgs/f1.jpg" width="45%" height="45%"/>
+						<ul>
+							<li class="fragment">$p^{*}$ is globally asymptotically stable under the replicator equation</li>
+							<li class="fragment">$p^{*}$ is not an ESS</li>
+							<ul class="fragment">
+								<li>$\pi(e_{1}, p^{*})=\pi(p^{*},p^{*})=4/29$</li>
+								<li>$\pi(p^{*}, e_{1})=-(10/29)<0=\pi(e_{1}, e_{1})$</li>
+							</ul>
+						</ul>
+					</section>
+					<section>
+						<h3>Cyclic behavior</h3>
+						<ul>
+							<li class="fragment">
+								Biology
+								<ul><li>Predator-prey systems</li></ul>
+							</li>
+							<li class="fragment">
+								Human behavior
+								<ul>
+									<li>Business cycles</li>
+									<li>Emergence/Disappearance of fads</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
 				</section>
 
 				<!-- END SYMMETRIC GAMES -->
@@ -206,7 +361,14 @@
 					{ src: 'plugin/math/math.js', async: true }
 				]
 			});
+			window.addEventListener("mousedown", handleClick, false);
+			window.addEventListener("contextmenu", function(e) { e.preventDefault(); }, false);
 
+			function handleClick(e) {
+				e.preventDefault();
+				if(e.button === 0) Reveal.next();
+				if(e.button === 2) Reveal.prev();
+			}
 		</script>
 
 	</body>
