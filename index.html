@@ -331,8 +331,155 @@
 						</ul>
 					</section>
 				</section>
-
 				<!-- END SYMMETRIC GAMES -->
+				<!-- START POPULATION GAMES -->
+				<section>
+					<section>
+						<h1>Population Games</h1>
+					</section>
+					<section>
+						<h3>Symmetric Population Games</h3>
+						<ul>
+							<li class="fragment">Straightforward generalizations of matrix games</li>
+							<li class="fragment">Payoff $\pi(e_{i}, p)$ arbitrary continuous function of strategy $e_{i}$ and population state $p\in\Delta^{m}$</li>
+							<li class="fragment">If $\pi(e_{i}, p)$ is linear in the components of $p$</li>
+							<ul><li class="fragment">Matrix games</li></ul>
+							<li class="fragment">Equating fitness to reproductive success leads to the replicator equation on $\Delta^{m}$</li>
+							<li class="fragment">
+								Interior ESS no longer need to be globally asymptotically stable
+								<ul><li>More than one ESS</li></ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Example 2</h3>
+						<h4>Habitat Selection Game and Ideal Free Distribution</h4>
+						<ul>
+							<li class="fragment">HSG from Fretwell and Lucas</li>
+							<li class="fragment">
+								Predicting species distribution among several patches
+								<ul><li>Individuals move to patches with higher payoff</li></ul>
+							</li>
+							<li class="fragment">Ideal Free Distribution</li>
+							<ul class="fragment">
+								<li>Fitness of individuals in occupied patch $\geq$ Their fitness in unoccupied patch</li>
+							</ul>
+							<li class="fragment">
+								Population game
+								<ul>
+									<li>$H$ patches</li>
+									<li>Individual's strategy $e_{i}$: being in patch $i$ $(\text{for }i=1,\ldots,H)$</li>
+									<li>Equate the payoff of $e_{i}$ to the fitness in this patch</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Example 2</h3>
+						<ul>
+							<li class="fragment">
+								If patch fitness decrease in patch density
+								<ul class="fragment">
+									<li>Unique IFD per population size</li>
+									<li>IFD is a globally asymptotically stable ESS under the replicator eqaution</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Example 2</h3>
+						<ul>
+							Let
+							<li>$p\in\Delta^{H}$ be a distribution among the patches</li>
+							<li class="fragment">$\pi(e_{i}, p)$ be the fitness in patch $i$</li>
+							<span class="fragment">Because</span>
+							<li class="fragment">Vector field $(\pi(e_{1}, p),\ldots, \pi(e_{H}, p))$ gradient of $F(p)\in\Delta^{H}$</li>
+							<center><span class="fragment">We have a potential game</span></center>
+						</ul>
+					</section>
+					<section>
+						<h3>Example 2</h3>
+						<ul>
+							<li class="fragment">Strictly stable game</li>
+							<li class="fragment">Unique ESS $p^{*}$ globally asymptotically stable under the replicator equation</li>
+							<li class="fragment">
+								Continuous-time migration dynamics
+							<ul>
+								<li>$\dot{p} = I(p)p - p$</li>
+								<ul>
+									<li class="fragment">$I(p)$: $H x H$ migration matrix</li>
+									<li class="fragment">$I_{ij}(p)$: prob. individual in patch $j$ moves to patch $i$ (per unit time), current patch distribution $p$</li>
+								</ul>
+							</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Theorem 3</h3>
+						<font face="Times New Roman">
+							<center>
+							Suppose patch fitness is a decreasing function of patch density in a single-species habitat selection game. Then any migration dynamics 3 that satisfies the following two conditions evolves to the unique IFD.
+							</center>
+							<ol>
+								<li>Individuals never move to a patch with lower fitness</li>
+								<li>If there is a patch with higher fitness than some occupied patch, some individuals move to a patch with highest fitness</li>
+							</ol>
+						</font>
+					</section>
+					<section>
+						<h3>More on Theorem 3</h3>
+						<ul>
+							<li>Three patches $\pi(e_{1}, p) \gt \pi(e_{2}, p) \gt \pi(e_{3}, p)$</li>
+							<center>$I^{1}(p)\equiv\begin{bmatrix} 1 & 1 & 1 \\ 0 & 0 & 0 \\0 & 0 & 0\end{bmatrix}I^{2}(p)\equiv\begin{bmatrix} 1 & 1/3 & 1/3 \\ 0 & 2/3 & 1/3 \\0 & 0 & 1/3\end{bmatrix}$</center>
+						</ul>
+					</section>
+					<section>
+						<h3>More on Theorem 3</h3>
+						<ul>
+							<li>
+								Corrisponding game dynamics
+								<ul>
+									<li>$\dot{p} = BR(p)p - p$</li>
+								</ul>
+							</li>
+							<center><img src="imgs/f2.jpg" width="55%" height="55%"/></center>
+							<li class="fragment">All trajectories converge to the IFD</li>
+						</ul>
+					</section>
+				</section>
+				<!-- END POPULATION GAMES -->
+				<!-- START GAMES WITH CONTINUOUS STRATEGY SPACES -->
+				<section>
+					<section>
+						<h1>Games With Continuous Strategy Spaces</h1>
+					</section>
+					<section>
+						<h3>Continuous it's complicated</h3>
+						<ul>
+							<li class="fragment">
+								Game dynamics with a continuum pure strategies $S$
+								<ul>
+									<li class="fragment">It's complicated</li>
+									<li class="fragment">Individual payoff depends on the population state $p$</li>
+									<li class="fragment">$p$ is a distribution in the set of probability measures $\Delta(S)$</li>
+								</ul>
+							</li>
+							<li class="fragment">
+								Assumptions make your life easier
+								<ul>
+									<li class="fragment">Monomorphic population at its mean $x \in S$</li>
+									<li class="fragment">$x$ evolves through trait substitution in the direction $y$</li>
+									<li class="fragment"></li>
+								</ul>
+							</li>
+
+							<li class="fragment"></li>
+							<li class="fragment"></li>
+							<li class="fragment"></li>
+						</ul>
+					</section>
+				</section>
+				<!-- END GAMES WITH CONTINUOUS STRATEGY SPACES -->
 			</div>
 
 		</div>
@@ -358,7 +505,9 @@
 
 				dependencies: [
 					{ src: 'lib/js/classList.js' },
-					{ src: 'plugin/math/math.js', async: true }
+					{ src: 'plugin/math/math.js', async: true },
+					{ src: 'plugin/wave/webcam-swiper-0.1.js'},
+					{ src: 'plugin/wave/client.js'}
 				]
 			});
 			window.addEventListener("mousedown", handleClick, false);
@@ -369,6 +518,7 @@
 				if(e.button === 0) Reveal.next();
 				if(e.button === 2) Reveal.prev();
 			}
+
 		</script>
 
 	</body>
