@@ -454,7 +454,7 @@
 						<h1>Games With Continuous Strategy Spaces</h1>
 					</section>
 					<section>
-						<h3>Continuous it's complicated</h3>
+						<h3>Continuous strategy space</h3>
 						<ul>
 							<li class="fragment">
 								Game dynamics with a continuum pure strategies $S$
@@ -469,17 +469,200 @@
 								<ul>
 									<li class="fragment">Monomorphic population at its mean $x \in S$</li>
 									<li class="fragment">$x$ evolves through trait substitution in the direction $y$</li>
-									<li class="fragment"></li>
+									<li class="fragment">
+										$y$ are nearby mutants
+										<ul>
+											<li>They can invade</li>
+											<li>Higher payoff against $x$</li>
+										</ul>
+									</li>
+
 								</ul>
 							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Canonical Equation of Adaptive Dynamics</h3>
+						<ul>
+							<li class="fragment">$\pi(y,x)$ payoff of a mutant using strategy $y$ in a monomorphic population $x$
+								<ul>
+									<li class="fragment">Direct proportionality between $\pi(y,x)$ and $x$, for $y$ close to $x$</li>
+								</ul>
+							</li>
+							<center class="fragment">$\dot{x}=\frac{\partial\pi(y,x)}{\partial y}\bigg|_{y=x}\equiv\pi_{1}(x,x)$</center>
+						</ul>
+					</section>
+					<section>
+						<h3>Continuously Stable Strategy</h3>
+						<ul>
+							<li class="fragment">
+								Dimorphic population
+								<ul>
+									<li class="fragment">Some using pure strategies on $x^{*}$</li>
+									<li class="fragment">Some evolving away from $x^{*}$</li>
+								</ul>
+							</li>
+							<li class="fragment">
+								Continuously Stable Strategy
+								<ol>
+									<li>$\pi_{11}(x^{*},x^{*}) < 0 \text{ (neighborhood-strict NE condition) and}$</li>
+									<li>$\pi_{11}(x^{*},x^{*}) + \pi_{12}(x^{*},x^{*}) < 0 \text{ (convergence stability}$ $\text{condition)}$</li>
+								</ol>
+							</li>
+							<li class="fragment">
+								If condition 1 is not met
+								<ul><li class="fragment">$x^{*}$ is called an <em>evolutionary branching point</em></li></ul>
+							</li>
 
-							<li class="fragment"></li>
-							<li class="fragment"></li>
-							<li class="fragment"></li>
+						</ul>
+					</section>
+					<section>
+						<h3>Replicator Equation in 1D continuous strategy space</h3>
+						<center>$\frac{dP_{t}}{dt}(B)=\int\limits_B(\pi(x,P_t)-\pi(P_t,P_t))P_t dx$</center>
+						<ul>
+							<li class="fragment">Unique solution in the infinite dimensional space $\Delta(S)$ of Borel probability measures over the strategy space $S$</li>
+							<li class="fragment">
+								If $x^{*}$ is stable for all directions
+								<ul><li>Corresponding CSS has similar strong stability properties as the ESS does for matrix games</li></ul>
+							</li>
 						</ul>
 					</section>
 				</section>
 				<!-- END GAMES WITH CONTINUOUS STRATEGY SPACES -->
+				<!-- START MULTIPLAYER GAMES -->
+				<section>
+					<section>
+						<h1>Multiplayer Games</h1>
+					</section>
+					<section>
+						<h3>Multiplayer Games</h3>
+						<ul>
+							<li class="fragment">Interactions among $n$ players</li>
+							<ul><li class="fragment">Matrix games are special types of multiplayer games</li></ul>
+							<li class="fragment">$\pi(e_{i};p)=\sum_{j,k=1}^{m}{p_jp_k\pi(e_i;e_j,e_k)}, p\in\Delta^{3}$</li>
+						</ul>
+					</section>
+					<section>
+						<h3>ESS in three-player games</h3>
+						<ol>
+							$p^* \text{is an ESS iff, for all p}\neq p^*$
+							<li>$\pi(p; p^*, p^*)\leq\pi(p^*; p^*, p^*)\text{ (NE condition)}$</li>
+							<li>$\text{if }\pi(p; p^*, p^*)=\pi(p^*; p^*, p^*),\text{ then }\pi(p; p^*, p)\leq\pi(p^*; p^*, p)$</li>
+							<li>$\text{if }\pi(p; p^*, p^*)=\pi(p^*; p^*, p^*)\text{ and }\pi(p; p^*, p)=\pi(p^*; p^*, p)$<br/>$\text{ then }\pi(p;p,p)\lt\pi(p^*;p,p)$</li>
+						</ol>
+						<ul><li class="fragment">Public Goods Game can be modeled as a MPG</li></ul>
+					</section>
+				</section>
+				<!-- END MULTIPLAYER GAMES -->
+				<!-- START ASYMMETRIC GAMES -->
+				<section>
+					<section>
+						<h1>Asymmetric Games</h1>
+					</section>
+					<section>
+						<h3>Asymmetric Games</h3>
+						<ul>
+							Multiplayer game where
+							<li class="fragment">Players have roles with a certain probability</li>
+							<li class="fragment">Each role has a set of strategies</li>
+							<li class="fragment">Consider two-role two-players asymmetric games
+								<ul>
+									<li>Finite pure strategy sets $\{e_1,\ldots,e_m\}$ and $\{f_1,\ldots,f_n\}$</li>
+									<li>Called <em>two species games</em></li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Replicator Equation for Two Species Games</h3>
+						<center>$\dot{p}=p_i(\pi_1(e_i;p,q)-\pi_1(p;p,q))\text{ for }i=1,\ldots,m$</center>
+						<center>$\dot{q}=q_j(\pi_2(f_j;p,q)-\pi_2(q;p,q))\text{ for }j=1,\ldots,n$</center>
+						<ul>
+							<li class="fragment">Strategy space $\Delta^m$ x $\Delta^n$</li>
+							<li class="fragment">NE strategy pair $(p^*, q^*)$
+								<ul>
+									<li>$\pi_1(p;p^*,q^*)\leq\pi(p^*;p^*,q^*)\text{ for all }p\neq p^*$ and</li>
+									<li>$\pi_2(q;p^*,q^*)\leq\pi(q^*;p^*,q^*)\text{ for all }q\neq q^*$</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Theorem 4</h3>
+						<font face="Times New Roman">
+							<ol type="a">
+								<li>$(p^*,q^*)$ is a two-species ESS if and only if <br/>
+									either $\pi_1(p^*;p,q)\gt \pi_1(p;p,q)$<br/>
+									or $\pi_2(q^*;p,q)\gt \pi_2(q;p,q)$<br/>
+									for all strategy pairs $(p,q)$ close to $(p^*,q^*)$
+								</li>
+								<li>A two-species ESS $(p^*,q^*)$ is a locally asymptotically stable rest point of the replicator equation</li>
+								<li>A two-species ESS $(p^*,q^*)$ in the interior of $\Delta^m$ x $\Delta^n$ is a globally asymptotically stable rest point of the replicator equation</li>
+							</ol>
+						</font>
+					</section>
+				</section>
+				<!-- END ASYMMETRIC GAMES -->
+				<!-- START ASYMMETRIC EXTENSIVE FORM GAMES -->
+				<section>
+					<section>
+						<h1>Asymmetric Extensive Form Games</h1>
+					</section>
+					<section>
+						<h3>Asymmetric Extensive Form Games</h3>
+						<ul>
+							<li class="fragment">Introduced in 1944 by von Neumann and Morgenstern</li>
+							<li class="fragment">Decision trees describe finite series of interactions between the same two players</li>
+							<li class="fragment">Set of actions available at later interactions depending on earlier ones</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Chain Store Game</h3>
+						<img src="imgs/f3.jpg" width="60%" height="60%"/>
+						<ul>
+							<li class="fragment">Two NE outcomes</li>
+							<li class="fragment">NE Component</li>
+							<ul><li class="fragment">$G\equiv\big\{\big(L,q_1 l+(1-q_1)r\big)\big|\frac{1}{2}\leq q_1\leq 1\big\}$</li></ul>
+						</ul>
+					</section>
+					<section>
+						<h3>Theorem 5</h3>
+						<font face="Times New Roman">
+						<ol>
+							<li class="fragment">Every NE outcome is a single terminal node</li>
+							<li class="fragment">Every NE component $G$ includes a pure strategy pair</li>
+							<li class="fragment">The outcomes of all elements of G are the same</li>
+							<li class="fragment">Every interior trajectory converges to a NE</li>
+							<li class="fragment">If a NE component is interior attracting, it includes the sub-
+game perfect NE (SPNE) defined below</li>
+							<li class="fragment">A NE is locally asymptotically stable if and only if it is a strict SPNE if and only if it is pervasive (i.e., it reaches every player decision point)</li>
+						</ol>
+						<center class="fragment"><strong>Theorem 5.</strong> These six results are true for all generic perfect information games without moves by nature</center>
+						</font>
+					</section>
+				</section>
+				<!-- END ASYMMETRIC EXTENSIVE FORM GAMES -->
+				<!-- START CONCLUSIONS -->
+				<section>
+					<section>
+						<h1>Conclusions</h1>
+					</section>
+					<section>
+						<h3>Conclusions</h3>
+						<ul>
+							<li class="fragment">Replicator Equation and other game dynamics</li>
+							<ul>
+								<li class="fragment">Essential tools over last 40 years</li>
+								<li class="fragment">Applying evolutionary game theory to behavioral models</li>
+							</ul>
+							<li class="fragment">Static game-theoretic solution concepts (e.g., NE and ESS)</li>
+							<ul>
+								<li class="fragment">Central role in predicting evolutionary outcome of game dynamics</li>
+							</ul>
+						</ul>
+					</section>
+				</section>
+				<!-- END CONCLUSIONS -->
 			</div>
 
 		</div>
