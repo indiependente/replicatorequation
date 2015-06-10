@@ -100,7 +100,7 @@
 						<h3>Time matters</h3>
 						<ul>
 							<li class="fragment">Considering a large, well-mixed, single species</li>
-							<li class="fragment">Frequency of a strategy changes under the replicator equation</li>
+							<li class="fragment">Frequency of a strategy changes in time</li>
 							<li class="fragment">Change rate equal to <em>difference between its expected payoff and the average population payoff</em></li>
 						</ul>
 					</section>
@@ -149,10 +149,10 @@
 						<h3>Natural Selection in Human Societies</h3>
 						<ul>
 							<li class="fragment">Individuals and societies alter their behavior based on payoff consequences</li>
-							<li class="fragment">Here emerges <em>the Replicator Equation</em></li>
 							<ul>
 								<li class="fragment">For example: individuals making rational decisions on how to imitate observed strategies that currently receive higher payoff</li>
 							</ul>
+							<li class="fragment">Here emerges <em>the Replicator Equation</em></li>
 						</ul>
 					</section>
 				</section>
@@ -192,7 +192,7 @@
 
 								<li class="fragment">
 									$p_{i}$ proportion of population using strategy $e_{i}$ at time $t$
-									<ul><li>$p_{i} = n_{i}/\sum_{j=1}^{m}{n_{j}}$</li></ul>
+									<ul><li>$p_{i} = n_{i}\big/\sum_{j=1}^{m}{n_{j}}$</li></ul>
 								</li>
 
 								<li class="fragment">$\pi(p, p) = \sum_{j=1}^{m}{p_{i}\pi(e_{i}, p)}$ population mean payoff</li>
@@ -229,21 +229,14 @@
 					</section>
 
 					<section>
-						<h3>Strategic Reasoning</h3>
-						<ul>
-							<li class="fragment">Enhances the importance of strategic reasoning</li>
-							<li class="fragment">Based on the concept of ESS</li>
-							<li class="fragment">J. M. Smith wanted to be more precise on the ESS definition</li>
-						</ul>
-					</section>
-
-					<section>
 						<h3>Maynard on ESS</h3>
-							In a matrix game, if most individuals in the population use $p^{*}\in\Delta^{m}$ with the rest using a mutant strategy $p$, then the mutant strategy will go extinct iff
+							<span class="fragment">In a matrix game, if most individuals in the population use $p^{*}\in\Delta^{m}$ with the rest using a mutant strategy $p$, then the mutant strategy will go extinct iff</span>
+							<br/>
 							<ul class="fragment">
 								<li>$\pi(p, p^{*})\leq\pi(p^{*}, p^{*})$ (NE condition) <b>and</b></li>
 								<li>$\pi(p^{*}, p) \gt \pi(p, p) \text{ if } \pi(p, p^{*})=\pi(p^{*}, p^{*})$ (stability condition)</li>
 							</ul>
+							<br/>
 							<span class="fragment">$p^{*}\in\Delta^{m}$ is then an ESS if it satisfies these two conditions for all other $p\in\Delta^{m}$</span>
 					</section>
 
@@ -251,7 +244,7 @@
 						<h3>Theorem 2</h3>
 						<font face="Times New Roman">
 						<ol>
-							<li>$p^{*}$ is an ESS of a matrix game iff $\pi(p^{*}, p) > \pi(p, p) \forall p \in \Delta^{m}$ sufficiently close (but not equal) to $p^{*}$</li>
+							<li>$p^{*}$ is an ESS of a matrix game iff $\pi(p^{*}, p) > \pi(p, p)$ $\forall p \in \Delta^{m}$ sufficiently close (but not equal) to $p^{*}$</li>
 							<li>An ESS $p^{*}$ is a locally asymptotically stable rest point of the replicator equation</li>
 							<li>An ESS $p^{*}$ in the interior of $\Delta^{m}$ is a globally asymptotically stable rest point of the replicator equation</li>
 						</ol>
@@ -259,16 +252,20 @@
 						</font>
 					</section>
 					<section>
-						<h3>Theorem 2</h3>
+						<h3>More on Theorem 2</h3>
 						<ul>
-							<li>
+							<li class="fragment">
 								These statements are not always true
 								<ul>
 									<li>Three-strategy games that exhibit cyclic dominance</li>
 								</ul>
 							</li>
-
 						</ul>
+					</section>
+					<section>
+						<h3>Example 1</h3>
+						<h4>Generalized Rock Scissors Paper game</h4>
+						<img src="imgs/rsp_fun.jpg" width="50%" height="50%"/>
 					</section>
 					<section>
 						<h3>Example 1</h3>
@@ -297,8 +294,9 @@
 						<ul>
 							<li class="fragment">R beats S (strictly dominates), S beats P and P beats R</li>
 							<li class="fragment">Dominance implies that there is no NE on the boundary of $\Delta^{3}$</li>
-							<li class="fragment">$p^{*}=(10/29, 8/29, 11/29)$ complete mixed strategy interior
-								<ul><li>Unique NE</li></ul>
+							<li class="fragment">Standard RSP game <ul><li>Unique NE $p^*= (1/3,1/3,1/3)$</li></ul></li>
+							<li class="fragment">Complete mixed strategy interior
+								<ul><li>Unique NE $p^{*}=(10/29, 8/29, 11/29)$</li></ul>
 							</li>
 						</ul>
 					</section>
@@ -313,6 +311,11 @@
 								<li>$\pi(p^{*}, e_{1})=-(10/29)<0=\pi(e_{1}, e_{1})$</li>
 							</ul>
 						</ul>
+					</section>
+					<section>
+						<h3>Example 1</h3>
+						<center><span class="fragment">It <b>violates</b> Theorem 2... But why?</span></center>
+						<img class="fragment" src="imgs/rsp.jpg" width="75%" height="75%"/>
 					</section>
 					<section>
 						<h3>Cyclic behavior</h3>
@@ -350,6 +353,11 @@
 								<ul><li>More than one ESS</li></ul>
 							</li>
 						</ul>
+					</section>
+					<section>
+						<h3>Example 2</h3>
+						<h4>Habitat Selection Game and Ideal Free Distribution</h4>
+						<img class="fragment" src="imgs/ex2.png">
 					</section>
 					<section>
 						<h3>Example 2</h3>
@@ -392,8 +400,10 @@
 							Let
 							<li>$p\in\Delta^{H}$ be a distribution among the patches</li>
 							<li class="fragment">$\pi(e_{i}, p)$ be the fitness in patch $i$</li>
+							<br/>
 							<span class="fragment">Because</span>
 							<li class="fragment">Vector field $(\pi(e_{1}, p),\ldots, \pi(e_{H}, p))$ gradient of $F(p)\in\Delta^{H}$</li>
+							<br/>
 							<center><span class="fragment">We have a potential game</span></center>
 						</ul>
 					</section>
@@ -418,7 +428,7 @@
 						<h3>Theorem 3</h3>
 						<font face="Times New Roman">
 							<center>
-							Suppose patch fitness is a decreasing function of patch density in a single-species habitat selection game. Then any migration dynamics 3 that satisfies the following two conditions evolves to the unique IFD.
+							Suppose patch fitness is a decreasing function of patch density in a single-species habitat selection game. Then any migration dynamics that satisfies the following two conditions evolves to the unique IFD.
 							</center>
 							<ol>
 								<li>Individuals never move to a patch with lower fitness</li>
@@ -461,7 +471,7 @@
 								<ul>
 									<li class="fragment">It's complicated</li>
 									<li class="fragment">Individual payoff depends on the population state $p$</li>
-									<li class="fragment">$p$ is a distribution in the set of probability measures $\Delta(S)$</li>
+									<ul><li class="fragment">$p$ is a distribution in the set of probability measures $\Delta(S)$</li></ul>
 								</ul>
 							</li>
 							<li class="fragment">
@@ -518,7 +528,7 @@
 					</section>
 					<section>
 						<h3>Replicator Equation in 1D continuous strategy space</h3>
-						<center>$\frac{dP_{t}}{dt}(B)=\int\limits_B(\pi(x,P_t)-\pi(P_t,P_t))P_t dx$</center>
+						<center class="fragment">$\frac{dP_{t}}{dt}(B)=\int\limits_B(\pi(x,P_t)-\pi(P_t,P_t))P_t dx$</center>
 						<ul>
 							<li class="fragment">Unique solution in the infinite dimensional space $\Delta(S)$ of Borel probability measures over the strategy space $S$</li>
 							<li class="fragment">
@@ -562,7 +572,7 @@
 					<section>
 						<h3>Asymmetric Games</h3>
 						<ul>
-							Multiplayer game where
+							<span class="fragment">Multiplayer game where</span>
 							<li class="fragment">Players have roles with a certain probability</li>
 							<li class="fragment">Each role has a set of strategies</li>
 							<li class="fragment">Consider two-role two-players asymmetric games
@@ -640,6 +650,36 @@ game perfect NE (SPNE) defined below</li>
 						<center class="fragment"><strong>Theorem 5.</strong> These six results are true for all generic perfect information games without moves by nature</center>
 						</font>
 					</section>
+					<section data-background="http://i.giphy.com/zq0AgzcpXzmvK.gif">
+						<h3>Example 3</h3>
+						<h4>Prey recognition game</h4>
+					</section>
+					<section>
+						<h3>Example 3</h3>
+						<h4>Prey recognition game</h4>
+						<ul>
+							<li class="fragment">Let $p_i$ be the prob. a random patch chosen by a predator contains</li>
+							<ul>
+								<li class="fragment">Prey of type $i = 1,2$ ($p_0$ the patch is empty)</li>
+							</ul>
+
+							<li class="fragment">If the predator finds a prey while spending search time $\tau_S$, it can</li>
+							<ul>
+								<li class="fragment">Attack immediately, $q_A$</li>
+								<li class="fragment">Move to another patch, $q_M$</li>
+								<li class="fragment">Spend some time doing prey type recognition, $q_R$</li>
+								<li class="fragment">$q \equiv (q_A, q_M, q_R) \in \Delta^3$</li>
+							</ul>
+						</ul>
+					</section>
+					<section>
+						<h3>Adaptive Dynamics</h3>
+						<div class="fragment">
+						<center>$\dot{q_A} = q_A (1-q_A)\frac{\partial}{\partial q_A}f(q_A,q_{A2})$</center>
+						<center>$\dot{q_B} = q_{A2} (1-q_{A2})\frac{\partial}{\partial q_{A2}}f(q_A,q_{A2})$</center>
+						</div>
+						<img class="fragment" src="imgs/f4.jpg" width="75%" height="75%"/>
+					</section>
 				</section>
 				<!-- END ASYMMETRIC EXTENSIVE FORM GAMES -->
 				<!-- START CONCLUSIONS -->
@@ -663,8 +703,7 @@ game perfect NE (SPNE) defined below</li>
 					</section>
 				</section>
 				<!-- END CONCLUSIONS -->
-				<section>
-					<h1>Thank you</h1>
+				<section data-background="http://i.giphy.com/a3IWyhkEC0p32.gif">
 				</section>
 			</div>
 
