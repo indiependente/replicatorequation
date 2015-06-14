@@ -17,6 +17,8 @@
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+		<!-- <link rel="stylesheet" href="css/theme/white.css" id="theme"> -->
+
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
@@ -40,7 +42,8 @@
 					<h2>The replicator equation and other game dynamics</h2>
 					<br></br>
 					<p class="footer">
-						Francesco Farina @ UNISA - 11/06/2015 •
+						Francesco Farina @ UNISA - 11/06/2015
+						<br/>
 						<a href="https://twitter.com/indiependente">@indiependente</a>•
 						<a href="https://github.com/indiependente">GitHub</a>
 					</p>
@@ -73,8 +76,7 @@
 						<h3>Game Dynamics</h3> <br/>
 						<ul>
 							<li class="fragment">Model how individuals or populations change their strategy over time based on payoff comparisons</li>
-							<li class="fragment">Contrast with noncooperative game theory (NE)</li>
-							<li class="fragment">Assume that strategies with higher payoff do better</li>
+							<li class="fragment">Contrast with noncooperative game theory</li>
 						</ul>
 					</section>
 
@@ -90,7 +92,7 @@
 					<section>
 						<h3>Evolutionary Game Theory</h3> <br/>
 						<ul>
-							<li class="fragment">Developed by Maynard Smith</li>
+							<li class="fragment">Developed by J.M. Smith</li>
 							<li class="fragment">Predict evolutionary outcome of population behavior</li>
 							<li class="fragment">Payoff translated as <i>fitness</i></li>
 						</ul>
@@ -114,36 +116,9 @@
 					</section>
 
 					<section data-background="http://www.youthunitedpress.com/wp-content/uploads/2013/02/darwin.jpg">
-						<h3>It's Darwin's <span class="fragment highlight-blue">survival of the fittest</span>, through <span class="fragment highlight-red">natural selection</span></h3>
+						<h3>It's Darwin's <span class="fragment highlight-red">survival of the fittest</span>, through <span class="fragment highlight-green">natural selection</span></h3>
 					</section>
 
-					<section>
-						<h3>What if...</h3>
-						<ul>
-							<li class="fragment">Individual payoff depends on actions of others</li>
-							<li class="fragment">EGT early success</li>
-
-						</ul>
-					</section>
-					<section>
-						<h3>Evolutionarily Stable Strategy</h3> <br/>
-						<ul>
-							<li class="fragment">Intuitive concept of uninvadability</li>
-							<li class="fragment">Strategy S is an ESS if $\exists$ $x$ small and positive so that S counters every level $x$ invasion</li>
-							<ul><li class="fragment">Every individual will adopt strategy S at the end</li></ul>
-						</ul>
-					</section>
-
-					<section>
-						<h3>ESS Formal Definition</h3>
-						<ul>
-							<li>S is an ESS if:</li>
-							<ol>
-								<li>$E(S,S) > E(T,S)$ <strong>or</strong></li>
-								<li>$E(S,S) = E(T,S)$ and $E(S,T) > E(T,T)$ $\forall T \neq S$</li>
-							</ol>
-						</ul>
-					</section>
 
 					<section>
 						<h3>Natural Selection in Human Societies</h3>
@@ -177,7 +152,7 @@
 					</section>
 
 					<section>
-						<h3>Continuous-Time Pure Strategy Replicator Equation</h3>
+						<h3>Continuous-Time Pure Strategy<br/>Replicator Equation</h3>
 						<br/>
 						<center>$\boxed{\dot{p}_{i}=p_{i}(\pi(e_{i}, p)-\pi(p, p)) \text{ for } i = 1, \ldots, m}$</center>
 						<br/>
@@ -215,7 +190,10 @@
 					<section>
 						<h3>More on Theorem 1</h3>
 						<ul>
-							<li class="fragment">Folk Theorem of Evolutionary Game Theory applied to the replicator equation</li>
+							<li class="fragment">
+								Folk Theorem of Evolutionary Game Theory
+								<ul><li>Applied to the replicator equation</li></ul>
+							</li>
 							<li class="fragment">
 								Biologists can predict the evolutionary outcome of their stable systems
 								<ul><li>By examining NE behavior of the underlying game</li></ul>
@@ -224,12 +202,38 @@
 								Individuals as rational decision makers
 								<ul><li>Natural selection through fitness drives system to stable outcome</li></ul>
 							</li>
-							<li class="fragment">Paradigm shift toward strategic reasoning in population biology</li>
+						</ul>
+					</section>
+					<!-- <section>
+						<h3>What if...</h3>
+						<ul>
+							<li class="fragment">Individual payoff depends on actions of others</li>
+							<li class="fragment">EGT early success</li>
+
+						</ul>
+					</section>
+					<section>
+						<h3>Evolutionarily Stable Strategy</h3> <br/>
+						<ul>
+							<li class="fragment">Intuitive concept of uninvadability</li>
+							<li class="fragment">Strategy S is an ESS if $\exists$ $x$ small and positive so that S counters every level $x$ invasion</li>
+							<ul><li class="fragment">Every individual will adopt strategy S at the end</li></ul>
+						</ul>
+					</section> -->
+
+					<section>
+						<h3>Evolutionarily Stable Strategy</h3>
+						<ul>
+							<li>S is an ESS if:</li>
+							<ol>
+								<li>$E(S,S) > E(T,S)$ <strong>or</strong></li>
+								<li>$E(S,S) = E(T,S)$ and $E(S,T) > E(T,T)$ $\forall T \neq S$</li>
+							</ol>
 						</ul>
 					</section>
 
 					<section>
-						<h3>Maynard on ESS</h3>
+						<h3>J. M. Smith on ESS</h3>
 							<span class="fragment">In a matrix game, if most individuals in the population use $p^{*}\in\Delta^{m}$ with the rest using a mutant strategy $p$, then the mutant strategy will go extinct iff</span>
 							<br/>
 							<ul class="fragment">
@@ -293,7 +297,6 @@
 						<h3>Example 1</h3>
 						<ul>
 							<li class="fragment">R beats S (strictly dominates), S beats P and P beats R</li>
-							<li class="fragment">Dominance implies that there is no NE on the boundary of $\Delta^{3}$</li>
 							<li class="fragment">Standard RSP game <ul><li>Unique NE $p^*= (1/3,1/3,1/3)$</li></ul></li>
 							<li class="fragment">Complete mixed strategy interior
 								<ul><li>Unique NE $p^{*}=(10/29, 8/29, 11/29)$</li></ul>
@@ -314,8 +317,8 @@
 					</section>
 					<section>
 						<h3>Example 1</h3>
-						<center><span class="fragment">It <b>violates</b> Theorem 2... But why?</span></center>
-						<img class="fragment" src="imgs/rsp.jpg" width="75%" height="75%"/>
+						<center><span>It <b>violates</b> Theorem 2... But why?</span></center>
+						<img src="imgs/rsp.jpg" width="75%" height="75%"/>
 					</section>
 					<section>
 						<h3>Cyclic behavior</h3>
@@ -343,21 +346,21 @@
 					<section>
 						<h3>Symmetric Population Games</h3>
 						<ul>
-							<li class="fragment">Straightforward generalizations of matrix games</li>
+							<li class="fragment">Generalizations of matrix games</li>
 							<li class="fragment">Payoff $\pi(e_{i}, p)$ arbitrary continuous function of strategy $e_{i}$ and population state $p\in\Delta^{m}$</li>
-							<li class="fragment">If $\pi(e_{i}, p)$ is linear in the components of $p$</li>
-							<ul><li class="fragment">Matrix games</li></ul>
+							<!-- <li class="fragment">If $\pi(e_{i}, p)$ is linear in the components of $p$</li>
+							<ul><li class="fragment">Matrix games</li></ul> -->
 							<li class="fragment">Equating fitness to reproductive success leads to the replicator equation on $\Delta^{m}$</li>
 							<li class="fragment">
-								Interior ESS no longer need to be globally asymptotically stable
-								<ul><li>More than one ESS</li></ul>
+								More than one ESS
+								<ul><li>Interior ESS no longer globally asymptotically stable</li></ul>
 							</li>
 						</ul>
 					</section>
 					<section>
 						<h3>Example 2</h3>
 						<h4>Habitat Selection Game and Ideal Free Distribution</h4>
-						<img class="fragment" src="imgs/ex2.png">
+						<img src="imgs/ex2.png">
 					</section>
 					<section>
 						<h3>Example 2</h3>
@@ -366,12 +369,9 @@
 							<li class="fragment">HSG from Fretwell and Lucas</li>
 							<li class="fragment">
 								Predicting species distribution among several patches
-								<ul><li>Individuals move to patches with higher payoff</li></ul>
 							</li>
 							<li class="fragment">Ideal Free Distribution</li>
-							<ul class="fragment">
-								<li>Fitness of individuals in occupied patch $\geq$ Their fitness in unoccupied patch</li>
-							</ul>
+
 							<li class="fragment">
 								Population game
 								<ul>
@@ -386,7 +386,7 @@
 						<h3>Example 2</h3>
 						<ul>
 							<li class="fragment">
-								If patch fitness decrease in patch density
+								If patch fitness decreases in patch density
 								<ul class="fragment">
 									<li>Unique IFD per population size</li>
 									<li>IFD is a globally asymptotically stable ESS under the replicator equation</li>
@@ -394,7 +394,7 @@
 							</li>
 						</ul>
 					</section>
-					<section>
+					<!-- <section>
 						<h3>Example 2</h3>
 						<ul>
 							Let
@@ -406,16 +406,14 @@
 							<br/>
 							<center><span class="fragment">We have a potential game</span></center>
 						</ul>
-					</section>
+					</section> -->
 					<section>
 						<h3>Example 2</h3>
 						<ul>
-							<li class="fragment">Strictly stable game</li>
-							<li class="fragment">Unique ESS $p^{*}$ globally asymptotically stable under the replicator equation</li>
 							<li class="fragment">
 								Continuous-time migration dynamics
 							<ul>
-								<li>$\dot{p} = I(p)p - p$</li>
+								<li>$\boxed{\dot{p} = I(p)p - p}$</li>
 								<ul>
 									<li class="fragment">$I(p)$: $H x H$ migration matrix</li>
 									<li class="fragment">$I_{ij}(p)$: prob. individual in patch $j$ moves to patch $i$ (per unit time), current patch distribution $p$</li>
@@ -428,7 +426,7 @@
 						<h3>Theorem 3</h3>
 						<font face="Times New Roman">
 							<center>
-							Suppose patch fitness is a decreasing function of patch density in a single-species habitat selection game. Then any migration dynamics that satisfies the following two conditions evolves to the unique IFD.
+							Suppose patch fitness is a decreasing function of patch density in a single-species habitat selection game. Then any migration dynamics $3$ that satisfies the following two conditions evolves to the unique IFD.
 							</center>
 							<ol>
 								<li>Individuals never move to a patch with lower fitness</li>
@@ -446,12 +444,7 @@
 					<section>
 						<h3>More on Theorem 3</h3>
 						<ul>
-							<li>
-								Corrisponding game dynamics
-								<ul>
-									<li>$\dot{p} = BR(p)p - p$</li>
-								</ul>
-							</li>
+							<li>$\dot{p} = BR(p)p - p$</li>
 							<center><img src="imgs/f2.jpg" width="55%" height="55%"/></center>
 							<li class="fragment">All trajectories converge to the IFD</li>
 						</ul>
@@ -474,6 +467,11 @@
 									<ul><li class="fragment">$p$ is a distribution in the set of probability measures $\Delta(S)$</li></ul>
 								</ul>
 							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Continuous strategy space</h3>
+						<ul>
 							<li class="fragment">
 								Assumptions make your life easier
 								<ul>
@@ -532,8 +530,7 @@
 						<ul>
 							<li class="fragment">Unique solution in the infinite dimensional space $\Delta(S)$ of Borel probability measures over the strategy space $S$</li>
 							<li class="fragment">
-								If $x^{*}$ is stable for all directions
-								<ul><li>Corresponding CSS has similar strong stability properties as the ESS does for matrix games</li></ul>
+								CSS similar to matrix games ESS
 							</li>
 						</ul>
 					</section>
@@ -560,7 +557,6 @@
 							<li>$\text{if }\pi(p; p^*, p^*)=\pi(p^*; p^*, p^*),\text{ then }\pi(p; p^*, p)\leq\pi(p^*; p^*, p)$</li>
 							<li>$\text{if }\pi(p; p^*, p^*)=\pi(p^*; p^*, p^*)\text{ and }\pi(p; p^*, p)=\pi(p^*; p^*, p)$<br/>$\text{ then }\pi(p;p,p)\lt\pi(p^*;p,p)$</li>
 						</ol>
-						<ul><li class="fragment">Public Goods Game can be modeled as a MPG</li></ul>
 					</section>
 				</section>
 				<!-- END MULTIPLAYER GAMES -->
@@ -622,8 +618,11 @@
 						<h3>Asymmetric Extensive Form Games</h3>
 						<ul>
 							<li class="fragment">Introduced in 1944 by von Neumann and Morgenstern</li>
-							<li class="fragment">Decision trees describe finite series of interactions between the same two players</li>
-							<li class="fragment">Set of actions available at later interactions depending on earlier ones</li>
+							<li class="fragment">
+								Finite series of interactions between the same two players
+								<ul><li>Described by decision trees</li></ul>
+							</li>
+							<li class="fragment">Later interactions depending on earlier ones</li>
 						</ul>
 					</section>
 					<section>
@@ -658,12 +657,12 @@ game perfect NE (SPNE) defined below</li>
 						<h3>Example 3</h3>
 						<h4>Prey recognition game</h4>
 						<ul>
-							<li class="fragment">Let $p_i$ be the prob. a random patch chosen by a predator contains</li>
+							<li class="fragment">$p_i$ probability a random patch chosen by a predator contains</li>
 							<ul>
-								<li class="fragment">Prey of type $i = 1,2$ ($p_0$ the patch is empty)</li>
+								<li class="fragment">Prey type $i = 1,2$ ($p_0$ empty patch)</li>
 							</ul>
 
-							<li class="fragment">If the predator finds a prey while spending search time $\tau_S$, it can</li>
+							<li class="fragment">Prey found while spending search time $\tau_S$</li>
 							<ul>
 								<li class="fragment">Attack immediately, $q_A$</li>
 								<li class="fragment">Move to another patch, $q_M$</li>
@@ -703,7 +702,9 @@ game perfect NE (SPNE) defined below</li>
 					</section>
 				</section>
 				<!-- END CONCLUSIONS -->
-				<section data-background="http://i.giphy.com/a3IWyhkEC0p32.gif">
+				<!-- <section data-background="http://i.giphy.com/a3IWyhkEC0p32.gif"> -->
+				<section data-transition="zoom">
+					<h1>Thank You</h1>
 				</section>
 			</div>
 
@@ -722,7 +723,7 @@ game perfect NE (SPNE) defined below</li>
 				history: true,
 				progress: true,
 				transition: 'slide',
-
+				slideNumber: 'c / t',
 				math: {
 					// mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
 					config: 'TeX-AMS_HTML-full'
@@ -730,11 +731,17 @@ game perfect NE (SPNE) defined below</li>
 
 				dependencies: [
 					{ src: 'lib/js/classList.js' },
-					{ src: 'plugin/math/math.js', async: true },
+					{ src: 'plugin/math/math.js', async: true }
+				/* UNCOMMENT THE FOLLOWING LINES TO ENABLE WEBCAM SWIPING
+					,
 					{ src: 'plugin/wave/webcam-swiper-0.1.js'},
 					{ src: 'plugin/wave/client.js'}
+				*/
 				]
 			});
+
+
+
 			window.addEventListener("mousedown", handleClick, false);
 			window.addEventListener("contextmenu", function(e) { e.preventDefault(); }, false);
 
